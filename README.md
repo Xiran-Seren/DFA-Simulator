@@ -45,7 +45,7 @@ root/
 * 输入最大长度 `N`，展示长度 `<= N` 的合法字符串
 * 输入字符串，判断是否被 DFA 接受
 
-网页为纯静态页面，可直接用浏览器打开运行。
+[浏览网页](https://xiran-seren.github.io/DFA-Simulator/)
 
 ---
 
@@ -185,6 +185,8 @@ aba
 ```text
 index.html
 ```
+或点[这里](https://xiran-seren.github.io/DFA-Simulator/)浏览在线网页
+
 
 ---
 
