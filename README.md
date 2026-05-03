@@ -135,7 +135,7 @@ DFA.exe
 运行程序后，输入 DFA 文件路径：
 
 ```text
-example/test.dfa
+example/example1.dfa
 ```
 
 然后输入最大长度 `N`：
@@ -185,14 +185,6 @@ aba
 ```text
 index.html
 ```
-
-即可使用 DFA 可视化功能。
-
-推荐使用现代浏览器，例如：
-
-* Chrome
-* Edge
-* Firefox
 
 ---
 
