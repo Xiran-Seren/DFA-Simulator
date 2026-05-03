@@ -2,6 +2,9 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#ifdef _WIN32
+#include <windows.h>
+#endif
 using namespace std;
 
 vector<char> alphabet;                  // 字符集
@@ -202,22 +205,26 @@ void generateStrings(string cur, int N) {
 }
 
 int main() {
+    #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    #endif
     string filename;
-    cout << "输入DFA文件名";
+    cout << u8"输入DFA文件名：";
     cin >> filename;
 
     if (!loadDFA(filename)) return 0;
     if (!checkDFA()) return 0;
 
     int N;
-    cout << "输入最大长度N";
+    cout << u8"输入最大长度N：";
     cin >> N;
 
-    cout << "长度 <= " << N << " 的合法字符串有：" << endl;
+    cout << u8"长度 <= " << N << u8" 的合法字符串有：" << endl;
     generateStrings("", N);
 
     string s;
-    cout << "输入要判断的字符串";
+    cout << u8"输入要判断的字符串：";
     cin >> s;
 
     recognize(s, true);
